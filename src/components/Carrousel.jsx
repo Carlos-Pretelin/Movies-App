@@ -3,24 +3,26 @@ import useGetData from '../hooks/useGetData';
 import "../styles/Carrousel.scss"
 
 
-const Carrousel = ({url, updater}) => {
+const Carrousel = () => {
 
     const {movies,
-        API_MOVIES,
-        IMAGE_URL,
-        setMovies,
-        loadData} = useGetData();
+            API_MOVIES,
+            API_KEY,
+            IMAGE_URL,
+            setMovies,
+            loadDataMovies} = useGetData();
 
-
-    useEffect( () =>{
-        loadData(url, updater);
-    },[])
-
+useEffect( () =>{
+     loadDataMovies(API_MOVIES);
+                
+},[])
+            
+    
   return (
     <div className='Carrousel'>
         <div className='Carrousel-Slider'>
             {movies.map(( item ) => (
-                <div className='Carrousel-Slider-Item'>
+                <div className='Carrousel-Slider-Item' key={item.id}>
                     <img className='Media-Poster' src={`${IMAGE_URL}${item.poster_path}`} alt={`${item.title} Poster`} />
                 </div>
             ))}

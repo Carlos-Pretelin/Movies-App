@@ -1,12 +1,37 @@
+
+
+
+
+
+
+.Carrousel{
+    margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .Carrousel-Slider{
     display: flex;
-    
+    background-color: grey;
     overflow-x: auto;
     width: 100%;
 }
 
 .Carrousel-Slider-Item{
     width: 200px;
+    margin: 0 15px;
 }
 .Media-Poster{
     width: inherit;
