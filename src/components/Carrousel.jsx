@@ -1,24 +1,28 @@
 import React, { useEffect } from 'react'
 import useGetData from '../hooks/useGetData';
+import "../styles/Carrousel.scss"
 
 
-const Carrousel = () => {
+const Carrousel = ({url, updater}) => {
 
     const {movies,
-        API,
-        API_KEY,
+        API_MOVIES,
+        IMAGE_URL,
         setMovies,
         loadData} = useGetData();
 
+
     useEffect( () =>{
-        loadData(API, setMovies);
+        loadData(url, updater);
     },[])
 
   return (
     <div className='Carrousel'>
-        <div className='Media-Wrapper'>
+        <div className='Carrousel-Slider'>
             {movies.map(( item ) => (
-                <h1>{item.title}</h1>
+                <div className='Carrousel-Slider-Item'>
+                    <img className='Media-Poster' src={`${IMAGE_URL}${item.poster_path}`} alt={`${item.title} Poster`} />
+                </div>
             ))}
         </div>
     </div>
