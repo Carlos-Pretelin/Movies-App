@@ -36,7 +36,7 @@ const CarrouselPeople = () => {
     <div className='Carrousel-Slider'>
         {actors.map(( item ) => (
             <div className='Carrousel-Slider-Item' key={item.id}>
-                <img className='Media-Poster' src={`${IMAGE_URL}${item.poster_path}`} alt={`${item.title} Poster`} />
+                <img className='Media-Poster' src={`${IMAGE_URL}${item.profile_path}`} alt={`${item.title} Poster`} />
             </div>
         ))}
     </div>

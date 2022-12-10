@@ -4,8 +4,8 @@ const useGetData = () => {
 
     const API_KEY = "?api_key=534a5e47e2f13aaa38e24c108307b419"
     const API_MOVIES = `https://api.themoviedb.org/3/trending/movie/day${API_KEY}`
-    const API_TVSHOWS = `https://api.themoviedb.org/3/tv/popular?api_key=${API_KEY}&language=en-US&page=1`
-    const API_ACTORS = `https://api.themoviedb.org/3/person/popular?api_key=${API_KEY}&language=en-US&page=1`
+    const API_TVSHOWS = `https://api.themoviedb.org/3/trending/tv/day${API_KEY}`
+    const API_ACTORS = `https://api.themoviedb.org/3/trending/person/week${API_KEY}`
 
     const IMAGE_URL = "https://image.tmdb.org/t/p/w300/"
 
@@ -29,6 +29,7 @@ const useGetData = () => {
         const media = data.results;
 
         setMovies(media)
+        console.log("MOVIES")
         console.log(media)
     }
 
@@ -38,15 +39,17 @@ const useGetData = () => {
         const media = data.results;
 
         setTvShows(media)
+        console.log("TV")
         console.log(media)
     }
 
     const loadDataActors = async ()=> {
         const res = await fetch(API_ACTORS);
         const data = await res.json();
-        const media = data.results.known_for;
+        const media = data.results;
 
         setActors(media)
+        console.log("ACTORS")
         console.log(media)
     }
 
