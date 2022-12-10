@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import useGetData from '../hooks/useGetData';
-import "../styles/CarrouselPeople.scss"
+//import "../styles/CarrouselPeople.scss"
+import defaultPicture from "../assets/DefaultPic-.png"
 
 const CarrouselPeople = () => {
 
@@ -25,18 +26,18 @@ const CarrouselPeople = () => {
                        
        },[])
 
+    
 
 
 
-
-
+// come images from actors dont show up so i added the default one to fill the space
 
   return (
     <div className='Carrousel'>
     <div className='Carrousel-Slider'>
         {actors.map(( item ) => (
             <div className='Carrousel-Slider-Item' key={item.id}>
-                <img className='Media-Poster' src={`${IMAGE_URL}${item.profile_path}`} alt={`${item.title} Poster`} />
+                <img className='Media-Poster' src={`${item.profile_path ? `${IMAGE_URL}${item.profile_path}` : defaultPicture}`} alt={`${item.title} Poster`} />
             </div>
         ))}
     </div>

@@ -5,7 +5,7 @@ const useGetData = () => {
     const API_KEY = "?api_key=534a5e47e2f13aaa38e24c108307b419"
     const API_MOVIES = `https://api.themoviedb.org/3/trending/movie/day${API_KEY}`
     const API_TVSHOWS = `https://api.themoviedb.org/3/trending/tv/day${API_KEY}`
-    const API_ACTORS = `https://api.themoviedb.org/3/trending/person/week${API_KEY}`
+    const API_ACTORS = `https://api.themoviedb.org/3/trending/person/day${API_KEY}`
 
     const IMAGE_URL = "https://image.tmdb.org/t/p/w300/"
 

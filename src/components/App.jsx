@@ -1,9 +1,12 @@
 import React, {useEffect} from 'react'
 import useGetData from '../hooks/useGetData'
-import Carrousel from './Carrousel'
+import Header from "./Header"
+import CarrouselMovies from './CarrouselMovies'
 import CarrouselPeople from './CarrouselPeople';
 import CarrouselTv from './CarrouselTv';
+import { Footer } from './Footer';
 import "../styles/App.scss"
+
 
 const App = () => {
 
@@ -25,10 +28,13 @@ const App = () => {
 
   return (
     <div>
+
+
+          <Header/>
         <h1>Heres the Picture Carrousel</h1>
           <div>
           <h2>Movies</h2>
-          <Carrousel />
+          <CarrouselMovies />
           </div>
 
           <div>
@@ -40,6 +46,10 @@ const App = () => {
           <h2>Actors</h2>
           <CarrouselPeople/>
           </div>
+
+
+
+          <Footer/>
         
     </div>
   )

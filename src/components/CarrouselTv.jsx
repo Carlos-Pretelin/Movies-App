@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import useGetData from '../hooks/useGetData'
-import "../styles/CarrouselTv.scss"
+//import "../styles/CarrouselTv.scss"
 
 const CarrouselTv = () => {
 
