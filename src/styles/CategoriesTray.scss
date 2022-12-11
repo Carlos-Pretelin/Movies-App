@@ -4,9 +4,16 @@
 
 .CategoriesTray{
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 200px;
+    align-items: start;
 }
 
 
-.CategoriesTray-Item{
-    width: 100px;
-}
+ .CategoriesTray-Item a{
+     display: flex;
+     margin: 2px 0 0 45px;
+     font-size: 20px;
+ }

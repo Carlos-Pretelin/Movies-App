@@ -31,6 +31,7 @@ const {movies,
         {categoriesMovies.map(item => (
 
             <div key={item.id} className='CategoriesTray-Item'>
+                
                 <a>{item.name}</a>
             </div>
 
