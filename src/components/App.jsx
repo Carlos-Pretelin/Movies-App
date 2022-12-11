@@ -4,8 +4,10 @@ import Header from "./Header"
 import CarrouselMovies from './CarrouselMovies'
 import CarrouselPeople from './CarrouselPeople';
 import CarrouselTv from './CarrouselTv';
+import CategoriesTray from './CategoriesTray';
 import { Footer } from './Footer';
 import "../styles/App.scss"
+
 
 
 const App = () => {
@@ -31,23 +33,23 @@ const App = () => {
 
 
           <Header/>
-        <h1>Heres the Picture Carrousel</h1>
+        
           <div>
-          <h2>Movies</h2>
+          
           <CarrouselMovies />
           </div>
 
           <div>
-          <h2>Tv Shows</h2>
+          
           <CarrouselTv/>
           </div>
 
           <div>
-          <h2>Actors</h2>
+          
           <CarrouselPeople/>
           </div>
 
-
+          <CategoriesTray/>
 
           <Footer/>
         

@@ -5,7 +5,9 @@
 
 
 .Carrousel{
-    margin-top: 100px;
+    margin: 0 20px 100px;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -13,8 +15,8 @@
 
 
 .Carrousel-Slider{
+    margin-top: 15px;
     display: flex;
-    background-color: grey;
     overflow-x: auto;
     width: 100%;
 }

@@ -1,1 +1,14 @@
 @import 'global';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+	
+	
+}
+
+body{
+    font-family: var(--Normal);
+    background-color: var(--Black);
+    color: var(--White);
+}

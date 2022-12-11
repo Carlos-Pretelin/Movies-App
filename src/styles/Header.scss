@@ -1,2 +1,55 @@
+@import 'global';
+
+.Header{
+    width: 100%;
+    height: 70px;
+    background-color: var(--DarkBlack);
+    font-family: var(--Netflix);
+    color: var(--White);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 75px;
+
+}
+
+.Header-Navigation{
+    display: flex;
+}
+
+.Header-Navigation-Logo  {
+    display: flex;
+    width: 150px;
+    padding: 5px;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--BrightRed);
+
+}
 
 
+.Header-Navigation-Logo img {
+    
+    width: 45px;
+
+}
+.Header-Navigation-Menu{
+    display: flex;
+    align-items: center;
+}
+.Header-Navigation-Menu a {
+    
+    width: 45px;
+    margin: 0 5px;
+
+}
+
+.Header-User{
+    height: 100%;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Header-User img{
+    border-radius: 3px;
+}

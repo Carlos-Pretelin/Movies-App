@@ -30,6 +30,7 @@ const CarrouselTv = () => {
 
   return (
     <div className='Carrousel'>
+                    <h1>Trending Tv Shows</h1>
         <div className='Carrousel-Slider'>
             {tvShows.map(( item ) => (
                 <div className='Carrousel-Slider-Item' key={item.id}>

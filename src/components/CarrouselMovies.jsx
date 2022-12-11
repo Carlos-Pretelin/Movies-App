@@ -20,7 +20,9 @@ useEffect( () =>{
     
   return (
     <div className='Carrousel'>
+            <h1>Trending Movies</h1>
         <div className='Carrousel-Slider'>
+            
             {movies.map(( item ) => (
                 <div className='Carrousel-Slider-Item' key={item.id}>
                     <img className='Media-Poster' src={`${IMAGE_URL}${item.poster_path}`} alt={`${item.title} Poster`} />

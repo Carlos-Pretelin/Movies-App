@@ -34,6 +34,7 @@ const CarrouselPeople = () => {
 
   return (
     <div className='Carrousel'>
+                    <h1>Trending Personalities</h1>
     <div className='Carrousel-Slider'>
         {actors.map(( item ) => (
             <div className='Carrousel-Slider-Item' key={item.id}>
