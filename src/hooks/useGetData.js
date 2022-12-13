@@ -34,14 +34,13 @@ const useGetData = () => {
 
 
 
-    // const loadData = async (url, updater)=> {
-    //     const res = await fetch(url);
-    //     const data = await res.json();
-    //     const media = data.results;
+     const loadData = async (url, updater)=> {
+         const {data} = await api(url)
+         const media = data.results;
 
-    //     updater(media)
-    //     console.log(media)
-    // }
+         updater(media)
+         console.log(media)
+     }
 
 
 
@@ -112,7 +111,10 @@ const useGetData = () => {
             loadMoviesCategories,
             loadTvCategories,
             loadDataTvShows,
-            loadDataActors,}
+            loadDataActors,
+            loadData,
+            api
+        }
 }
 
 export default useGetData

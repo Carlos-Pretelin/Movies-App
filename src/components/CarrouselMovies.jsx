@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, {useState, useEffect } from 'react'
 import useGetData from '../hooks/useGetData';
 import "../styles/Carrousel.scss"
 
@@ -10,10 +10,16 @@ const Carrousel = () => {
             API_KEY,
             IMAGE_URL,
             setMovies,
-            loadDataMovies} = useGetData();
+            loadDataMovies,
+            loadData,
+            } = useGetData();
+
+
+
 
 useEffect( () =>{
-     loadDataMovies(API_MOVIES);
+     
+     loadData("trending/movie/day", setMovies)
                 
 },[])
             
@@ -22,6 +28,8 @@ useEffect( () =>{
     <div className='Carrousel'>
             <h1>Trending Movies</h1>
         <div className='Carrousel-Slider'>
+
+            
             
             {movies.map(( item ) => (
                 <div className='Carrousel-Slider-Item' key={item.id}>
