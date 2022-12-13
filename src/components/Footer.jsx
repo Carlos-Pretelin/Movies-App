@@ -2,7 +2,7 @@ import React from 'react'
 import "../styles/Footer.scss"
 import ProfilePic from "../assets/CarlosPic.png"
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <section className='Footer'>
 
@@ -43,3 +43,6 @@ export const Footer = () => {
     </section>
   )
 }
+
+
+export default Footer;

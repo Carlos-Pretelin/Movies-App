@@ -1,5 +1,6 @@
 import React from 'react'
 import "../styles/Header.scss"
+import { Link } from 'react-router-dom';
 import Logo from "../assets/Logo1.png"
 import ProfilePic from "../assets/ProfilePic.png"
 
@@ -16,18 +17,16 @@ const Header = () => {
 
             <div className='Header-Navigation-Menu'>
                 <div>
-                    <a>
-                        Home
-                    </a>
-                    <a>
-                        Movies
-                    </a>
-                    <a>
-                        Series
-                    </a>
-                    <a>
-                        Actors
-                    </a>
+                    
+                    <Link to={"/"}>Home</Link>
+  
+                    <Link to={"/Movies"}>Movies</Link>
+   
+                    <Link to={"/Series"}>Series</Link>
+    
+                    <Link to={"/People"}>People</Link>
+                        
+                    
                 </div>
             </div>
         </div>
