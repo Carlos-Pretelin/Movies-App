@@ -5,22 +5,17 @@ import useGetData from '../hooks/useGetData'
 const CarrouselTv = () => {
 
 
-    const {movies,
+    const {
         tvShows,
-        actors,
-        API_MOVIES, 
-        API_TVSHOWS,
-        API_ACTORS,
-        API_KEY,
         IMAGE_URL,
-        setMovies,
-        loadDataMovies,
-        loadDataTvShows,
-        loadDataActors,} = useGetData();
+        loadData,
+        setTvShows} = useGetData();
+       
 
 
         useEffect( () =>{
-            loadDataTvShows(API_TVSHOWS);
+            
+            loadData(`trending/tv/day`, setTvShows)
                        
        },[])
 

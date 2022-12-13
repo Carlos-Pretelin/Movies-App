@@ -1,16 +1,13 @@
-import React, {useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import useGetData from '../hooks/useGetData';
 import "../styles/Carrousel.scss"
 
 
 const Carrousel = () => {
 
-    const {movies,
-            API_MOVIES,
-            API_KEY,
+    const  {movies,
             IMAGE_URL,
             setMovies,
-            loadDataMovies,
             loadData,
             } = useGetData();
 
@@ -19,7 +16,7 @@ const Carrousel = () => {
 
 useEffect( () =>{
      
-     loadData("trending/movie/day", setMovies)
+     loadData("trending/movie/day", setMovies, "Peliculas")
                 
 },[])
             

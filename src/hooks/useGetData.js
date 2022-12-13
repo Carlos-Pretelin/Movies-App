@@ -32,58 +32,70 @@ const useGetData = () => {
 
 
 
-
+    //movies, shows and actors
 
      const loadData = async (url, updater)=> {
          const {data} = await api(url)
          const media = data.results;
 
          updater(media)
-         console.log(media)
+         //console.log(media)
      }
+
+     // categories
+     const loadDataCategories = async (url, updater)=> {
+        const {data} = await api(url)
+        const media = data.genres;
+
+        updater(media)
+        //console.log(media)
+    }
 
 
 
     // MOVIES
-    const loadDataMovies = async ()=> {
-        const {data} = await api(`trending/movie/day`);
-        const media = data.results;
+    // const loadDataMovies = async ()=> {
+    //     const {data} = await api(`trending/movie/day`);
+    //     const media = data.results;
 
-        setMovies(media)
-        console.log("MOVIES AXIOS")
-        console.log(media)
-    }
+    //     setMovies(media)
+    //     console.log("MOVIES AXIOS")
+    //     console.log(media)
+    // }
 
-     const loadMoviesCategories = async ()=> {
-         const {data} = await api("genre/movie/list");
-         const media = data.genres;
+    //  const loadMoviesCategories = async ()=> {
+    //      const {data} = await api("genre/movie/list");
+    //      const media = data.genres;
 
-         setCategoriesMovies(media)
-         console.log("MOVIES Categories AXIOS")
-        console.log(media)
+    //      setCategoriesMovies(media)
+    //      console.log("MOVIES Categories AXIOS")
+    //     console.log(media)
 
-     }
+    //  }
 
 
-     // TV SHOWS
 
-    const loadDataTvShows = async ()=> {
-        const {data} = await api(`trending/tv/day`);
-        const media = data.results;
 
-        setTvShows(media)
-        console.log("TV SHOWS AXIOS")
-        console.log(media)
-    }
 
-    const loadTvCategories = async ()=> {
-        const {data} = await api("genre/tv/list")
-        const media = data.genres;
+    //  TV SHOWS
 
-        setCategoriesTv(media)
-        console.log("TV  CATEGORIES AXIOS")
-        console.log(media)
-    }
+    // const loadDataTvShows = async ()=> {
+    //     const {data} = await api(`trending/tv/day`);
+    //     const media = data.results;
+
+    //     setTvShows(media)
+    //     console.log("TV SHOWS AXIOS")
+    //     console.log(media)
+    // }
+
+    // const loadTvCategories = async ()=> {
+    //     const {data} = await api("genre/tv/list")
+    //     const media = data.genres;
+
+    //     setCategoriesTv(media)
+    //     console.log("TV  CATEGORIES AXIOS")
+    //     console.log(media)
+    // }
 
 
 
@@ -91,30 +103,29 @@ const useGetData = () => {
     // ACTORS
 
 
-    const loadDataActors = async ()=> {
-        const {data} = await api("trending/person/day");
-        const media = data.results;
+    // const loadDataActors = async ()=> {
+    //     const {data} = await api("trending/person/day");
+    //     const media = data.results;
 
-        setActors(media)
-        console.log("Actors AXIOS")
-        console.log(media)
-    }
+    //     setActors(media)
+    //     console.log("Actors AXIOS")
+    //     console.log(media)
+    // }
 
-  return   {movies,
+  return   {IMAGE_URL,
+            movies,
             tvShows,
             actors,
             categoriesMovies,
             categoriesTv,
-            IMAGE_URL,
             setMovies,
-            loadDataMovies,
-            loadMoviesCategories,
-            loadTvCategories,
-            loadDataTvShows,
-            loadDataActors,
+            setTvShows,
+            setActors,
+            setCategoriesMovies,
+            setCategoriesTv,
             loadData,
-            api
-        }
+            loadDataCategories}
+        
 }
 
 export default useGetData

@@ -7,22 +7,18 @@ const CarrouselPeople = () => {
 
 
 
-    const {movies,
-        tvShows,
+    const {
         actors,
-        API_MOVIES,
-        API_TVSHOWS,
-        API_ACTORS,
-        API_KEY,
+        setActors,
         IMAGE_URL,
-        setMovies,
-        loadDataMovies,
-        loadDataTvShows,
-        loadDataActors,} = useGetData();
+       
+        loadDataActors,
+        loadData} = useGetData();
 
 
         useEffect( () =>{
-            loadDataActors(API_ACTORS);
+            
+            loadData("trending/person/day", setActors)
                        
        },[])
 

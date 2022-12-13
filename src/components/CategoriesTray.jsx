@@ -6,12 +6,16 @@ const CategoriesTray = () => {
 
 const {
     categoriesMovies,
-    loadMoviesCategories,} = useGetData();
+    loadMoviesCategories,
+  loadData,
+  loadDataCategories,
+  setCategoriesMovies,
+} = useGetData();
 
 
 
   useEffect(()=>{
-    loadMoviesCategories();
+    loadDataCategories("genre/movie/list", setCategoriesMovies)
   }, [])  
   return (
     <div className='CategoriesTray'>
