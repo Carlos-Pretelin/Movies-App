@@ -6,8 +6,7 @@ const CategoriesTray = () => {
 
 const {
     categoriesMovies,
-    loadMoviesCategories,
-  loadData,
+    
   loadDataCategories,
   setCategoriesMovies,
 } = useGetData();

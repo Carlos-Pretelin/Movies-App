@@ -12,7 +12,7 @@ const CarrouselPeople = () => {
         setActors,
         IMAGE_URL,
        
-        loadDataActors,
+        
         loadData} = useGetData();
 
 
