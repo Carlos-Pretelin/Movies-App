@@ -4,22 +4,9 @@ import "../styles/CategoriesTray.scss"
 
 const CategoriesTray = () => {
 
-const {movies,
-    tvShows,
-    actors,
+const {
     categoriesMovies,
-    categoriesTv,
-    API_MOVIES,
-    API_TVSHOWS,
-    API_ACTORS,
-    API_KEY,
-    IMAGE_URL,
-    setMovies,
-    loadDataMovies,
-    loadMoviesCategories,
-    loadTvCategories,
-    loadDataTvShows,
-    loadDataActors,} = useGetData();
+    loadMoviesCategories,} = useGetData();
 
 
 
@@ -31,7 +18,7 @@ const {movies,
         {categoriesMovies.map(item => (
 
             <div key={item.id} className='CategoriesTray-Item'>
-                
+                <i className="fa-solid fa-circle-half-stroke"></i>
                 <a>{item.name}</a>
             </div>
 
