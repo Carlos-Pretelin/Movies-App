@@ -34,7 +34,7 @@ const Header = () => {
         <div className='Header-User'>
             <div className='Header-User-Profile'>
                 <img src={ProfilePic} alt="Profile Picture" />
-                <i class="fa-solid fa-caret-down"></i>
+                <i className="fa-solid fa-caret-down"></i>
             </div>
         </div>
 

@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import useGetData from '../hooks/useGetData'
+import { Link } from 'react-router-dom';
+import CategoryGalery from "../containers/CategoryGalery"
 import "../styles/CategoriesTray.scss"
 
 const CategoriesTray = () => {
@@ -20,10 +22,10 @@ const {
     <div className='CategoriesTray'>
         {categoriesMovies.map(item => (
 
-            <div key={item.id} className='CategoriesTray-Item'>
+            <Link to={"/CategoryGalery"} key={item.id} className='CategoriesTray-Item'>
                 <i className="fa-solid fa-circle-half-stroke"></i>
-                <a>{item.name}</a>
-            </div>
+                <span>{item.name}</span>
+            </Link>
 
             
         ))}

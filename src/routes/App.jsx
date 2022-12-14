@@ -5,7 +5,7 @@ import Home from '../containers/Home'
 import Movies from "../containers/Movies"
 import Series from "../containers/Series"
 import People from "../containers/People"
-
+import CategoryGalery from "../containers/CategoryGalery"
 import NotFound from "../components/NotFound"
 import "../styles/App.scss"
 
@@ -25,6 +25,7 @@ const App = () => {
         <Route exact path='/Movies' element={<Movies/>} />
         <Route exact path='/Series' element={<Series/>} />
         <Route exact path='/People' element={<People/>} />
+        <Route exact path='/CategoryGalery' element={<CategoryGalery/>} />
         <Route exact path='*' element={<NotFound/>} />
 
       </Routes>
