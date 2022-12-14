@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import useGetData from '../hooks/useGetData';
 import "../styles/Carrousel.scss"
+import PreviewModal from './PreviewModal';
 
 
 const Carrousel = () => {
@@ -9,6 +10,8 @@ const Carrousel = () => {
             IMAGE_URL,
             setMovies,
             loadData,
+            previewInfo,
+            setPreviewInfo
             } = useGetData();
 
 
@@ -33,7 +36,10 @@ useEffect( () =>{
                     <img className='Media-Poster' src={`${IMAGE_URL}${item.poster_path}`} alt={`${item.title} Poster`} />
                 </div>
             ))}
+
         </div>
+        <button onClick={()=>{setPreviewInfo(!previewInfo)}}>Culo</button>
+        {previewInfo ? <PreviewModal/> : console.log("hola")}
     </div>
   )
 }

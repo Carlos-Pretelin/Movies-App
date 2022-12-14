@@ -28,6 +28,8 @@ const useGetData = () => {
     const [categoriesMovies, setCategoriesMovies] = useState([]) 
     const [categoriesTv, setCategoriesTv] = useState([]) 
 
+    const [previewInfo, setPreviewInfo] = useState(true) 
+
 
 
 
@@ -39,7 +41,7 @@ const useGetData = () => {
          const media = data.results;
 
          updater(media)
-         //console.log(media)
+         console.log(media)
      }
 
      // categories
@@ -118,13 +120,15 @@ const useGetData = () => {
             actors,
             categoriesMovies,
             categoriesTv,
+            previewInfo,
             setMovies,
             setTvShows,
             setActors,
             setCategoriesMovies,
             setCategoriesTv,
             loadData,
-            loadDataCategories}
+            loadDataCategories,
+            setPreviewInfo}
         
 }
 

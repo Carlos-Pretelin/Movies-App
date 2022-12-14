@@ -3,7 +3,8 @@
 .Header{
     width: 100%;
     height: 70px;
-    background-color: var(--DarkBlack);
+    background: rgb(34,31,31);
+background: linear-gradient(0deg, rgba(34,31,31,1) 0%, rgba(20,20,20,1) 61%);
     font-family: var(--Netflix);
     color: var(--White);
     display: flex;
@@ -36,12 +37,14 @@
     display: flex;
     align-items: center;
 }
-.Header-Navigation-Menu a {
-    
-    width: 45px;
-    margin: 0 5px;
 
+.Header-Navigation-Menu-item{
+    width: 45px;
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--White);
 }
+
 
 .Header-User{
     height: 100%;
@@ -52,4 +55,14 @@
 }
 .Header-User img{
     border-radius: 3px;
+}
+
+
+.Header-User-Profile{
+    
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+    align-items: center;
+
 }

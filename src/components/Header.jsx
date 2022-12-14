@@ -18,13 +18,13 @@ const Header = () => {
             <div className='Header-Navigation-Menu'>
                 <div>
                     
-                    <Link to={"/"}>Home</Link>
+                    <Link className='Header-Navigation-Menu-item' to={"/"}>Home</Link>
   
-                    <Link to={"/Movies"}>Movies</Link>
+                    <Link className='Header-Navigation-Menu-item' to={"/Movies"}>Movies</Link>
    
-                    <Link to={"/Series"}>Series</Link>
+                    <Link className='Header-Navigation-Menu-item' to={"/Series"}>Series</Link>
     
-                    <Link to={"/People"}>People</Link>
+                    <Link className='Header-Navigation-Menu-item' to={"/People"}>People</Link>
                         
                     
                 </div>
@@ -34,7 +34,7 @@ const Header = () => {
         <div className='Header-User'>
             <div className='Header-User-Profile'>
                 <img src={ProfilePic} alt="Profile Picture" />
-                
+                <i class="fa-solid fa-caret-down"></i>
             </div>
         </div>
 
