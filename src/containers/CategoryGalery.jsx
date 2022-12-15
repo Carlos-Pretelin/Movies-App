@@ -7,6 +7,9 @@ const CategoryGalery = () => {
   return (
     <div className="CategoryGalery">
         Aqui van la media que corresponda a la categoria que escogi 
+        <div>
+          <h1>hola mundo</h1>
+        </div>
     </div>
   )
 }
